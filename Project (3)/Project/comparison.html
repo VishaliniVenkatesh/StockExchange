@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <header>
+        <div id="image">
+            <p><img src="images/logo.jpg" alt="no image" width="70px" height="70px;"></p>
+        </div>
+        <div id="text">
+            <p>Stock Market</p>
+        </div>
+        <nav>
+            <ul id="unordered">
+                <li id="list"><a href="dispaly-ipodetails.html">IPO Details</a></li>
+                <li id="list"><a href="comparison.html">Compare Company</a></li>
+                <li id="list"><a href="comparison.html">Company Sectors</a></li>
+                <li id="topic"><a href="admin-signout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <article>
+        <form>
+            <p id="body-text">Company Details</p>
+            <table class="table">
+                <tr>
+                    <td><label>Select Company/Sector</label></td>
+                    <td><select name="company" required>
+                            <option value="company1">company1</option>
+                            <option value="company2">company2</option>
+                            <option value="company3">company3</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td><label>Select Stock Exchange</label></td>
+                    <td><select name="stockexchange" required>
+                            <option value="BSE">BSE</option>
+                            <option value="NSE">NSE</option>
+                            <option value="LPO">LPO</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td><label>Company Name</label></td>
+                    <td><input type="text" name="companyname" id="companyname" required /></td>
+                </tr>
+                <tr>
+                    <td><label> From date</label></td>
+                    <td><input type="date" name="sdate" id="sdate" required /></td>
+                    <td><label>TO date</label></td>
+                    <td><input type="date" name="edate" id="edate" required /></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" name="submit" value="GenerateMap" id="gmbutton" /></td>
+                </tr>
+            </table>
+        </form>
+    </article>
+    <footer>
+        <p id="ftext">Copyright&copy; 2019</p>
+    </footer>
+</body>
+
+</html>

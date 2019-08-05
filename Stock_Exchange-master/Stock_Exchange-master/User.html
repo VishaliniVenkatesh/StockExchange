@@ -1,0 +1,120 @@
+<html>
+	<head>
+	<title>Import Stock</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="userstyle.css">
+	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+		
+		<div class="header">
+			<a href="#default" class="logo">StockExchange</a>
+			<div class="header-right">
+				<a class="active" href="#home">Logout</a>
+			</div>
+		</div>
+		
+		<br>
+		<br>
+		<main>
+
+		<input id="tab1" type="radio" name="tabs" checked>
+		<label for="tab1">IPO's</label>
+
+		<input id="tab2" type="radio" name="tabs">
+		<label for="tab2">Compare Company</label>
+	
+		<input id="tab3" type="radio" name="tabs">
+		<label for="tab3">Compare Sectors</label>
+		
+		
+		<section id="content1">
+		
+		 <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+	<h3>List of Company</h3>
+	<hr/>
+	<table class="table table-hover table-dark">
+  <thead>
+    <tr>
+      
+      <th scope="col">Company_code</th>
+      <th scope="col">Stock_exchange</th>
+      <th scope="col">price_per_share</th>
+	  <th scope="col">total_no_of_shares</th>
+	  <th scope="col">open_date_time</th>
+	  <th scope="col">remarks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+	  <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+	<tr>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+	  <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+		</section>
+		
+		<section id="content2">
+		<button type="button" title="Click to add more company details" style="float:right;" id="btnAddForm" onclick="CloneForm('myForm');"><i  style="font-size:24px" class="fa fa-plus" aria-hidden="true"></i></button>
+		<form  name="myForm">
+			<div class="container-fluid"> <!-- If Needed Left and Right Padding in 'md' and 'lg' screen means use container class -->
+				<div class="row" class="i-am-centered">
+					<div style="text-align:right" class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+						<p id="pid">Select Company Sectors:</p>
+						<p id="pid">Select Stock Exchange:</p>
+						<p id="pid">Company Name:</p>
+						<p id="pid">From Period:</p>
+						<input type="date" name="fromdate"><br><br>
+						<p id="pid">Specify Periodicity:</p>
+				   
+					</div>
+					<div style="text-align:left" class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+				
+						<input type="text" name="csector" placeholder="Select Company Sectors"/><br><br>
+						<input type="text" name="cstock" placeholder="Select Stock Exchange"/><br><br>
+						<input type="text" name="cname" placeholder="Company Name:"/><br><br>
+						
+						<p id="pid">To Period:</p>
+						<input type="date" name="todate"><br>
+						<br><br><br><br>
+						<input type="submit" value="Generate map"/>
+						
+						<hr/>
+					</div>
+				</div>
+			</div>
+		</form>
+		
+		<script>
+						function CloneForm(formName) {
+						var formCount = document.forms.length;
+						var oForm = document.forms[formName];
+						var clone = oForm.cloneNode(true);
+						clone.name += "_" + formCount;
+						document.getElementById('content2').appendChild(clone);
+						}
+		</script>
+		</section>
+		
+	</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Insert a new company</title>
+</head>
+
+<body>
+    <header>
+        <div id="image">
+            <p><img src="images/logo.jpg" alt="no image" width="70px" height="70px;"></p>
+        </div>
+        <div id="text">
+            <p>Stock Market</p>
+        </div>
+        <nav>
+            <ul id="unordered">
+                <li id="list"><a href="import-stock.html">Import Data</a></li>
+                <li id="list"><a href="insert-company.html">Manage Company</a></li>
+                <li id="list"><a href="list-companies.html">Manage exchange</a></li>
+                <li id="list"><a href="">Update IPO Details</a></li>
+                <li id="topic"><a href="admin-signout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <article>
+        <form>
+            <p id="body-text">Create a new company</p>
+            <table class="table">
+                <tr>
+                    <td><label>Companyname</label></td>
+                    <td><input type="text" name="companyname" id="comapnyname" required /></td>
+                </tr>
+                <tr>
+                    <td><label>CEO Name</label></td>
+                    <td><input type="text" name="ceo" id="ceo" required /></td>
+                </tr>
+                <tr>
+                    <td><label>Board Memebers</label></td>
+                    <td><input type="text" name="boardofdirectors" id="boardofdirectors" required /></td>
+                </tr>
+                <tr>
+                    <td><label>TurnOver</label></td>
+                    <td><input type="text" name="turnover" id="turnover" required /></td>
+                </tr>
+                <tr>
+                    <td><label>Brief Description</label></td>
+                    <td><input type="text" name="briefdescription" id="briefdescription" required /></td>
+                </tr>
+                <tr>
+                    <td><label>IPO Date</label></td>
+                    <td><input type="date" name="ipodate" id="ipodate" required /></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" name="submit" value="save" id="button" /></td>
+                </tr>
+            </table>
+        </form>
+    </article>
+    <footer>
+        <p id="ftext">Copyright&copy; 2019</p>
+    </footer>
+</body>
+
+</html>
